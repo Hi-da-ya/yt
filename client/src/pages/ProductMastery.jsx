@@ -31,17 +31,18 @@ const ProductMastery = () => {
             </div>
             <h3 className="course-title">Product Mastery</h3>
             <p className="course-description">
-              Master the art of building products that users actually need. Learn product sense, 
-              user research, and how to validate ideas in African markets.
+            You've done your research. You know Product Management is the right 
+            next step for your career. But now you're stuck wondering: "What's the 
+            surest path from where I am to where I want to be?"
             </p>
             <ul className="course-features">
-              <li>✓ User research & validation</li>
+              <li>✓ Fundamentals of Product Management</li>
               <li>✓ Product-market fit strategies</li>
               <li>✓ African market insights</li>
               <li>✓ Hands-on projects</li>
             </ul>
             <div className="course-footer">
-              <span className="course-duration">6 weeks</span>
+              <span className="course-duration">5 days</span>
               <div className="course-actions">
                 <button className="course-btn-learn" onClick={() => navigate('/course/product-mastery')}>Learn More</button>
                 <button className="course-btn">Enroll Now</button>
@@ -70,7 +71,7 @@ const ProductMastery = () => {
               <li>✓ Real-world case studies</li>
             </ul>
             <div className="course-footer">
-              <span className="course-duration">4 weeks</span>
+              <span className="course-duration">3 days</span>
               <div className="course-actions">
                 <button className="course-btn-learn" onClick={() => navigate('/course/no-code-automation')}>Learn More</button>
                 <button className="course-btn">Enroll Now</button>
@@ -99,7 +100,7 @@ const ProductMastery = () => {
               <li>✓ African market context</li>
             </ul>
             <div className="course-footer">
-              <span className="course-duration">3 weeks</span>
+              <span className="course-duration">3 days</span>
               <div className="course-actions">
                 <button className="course-btn-learn" onClick={() => navigate('/course/art-of-pitching')}>Learn More</button>
                 <button className="course-btn">Enroll Now</button>
