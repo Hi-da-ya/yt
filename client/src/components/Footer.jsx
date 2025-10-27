@@ -1,13 +1,15 @@
 import React from 'react'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <>
-    {/* Footer */}
-    <footer className="bg-[#212121] text-white py-16">
+      {/* Footer */}
+      <footer className="bg-[#212121] text-white py-16">
         <div className="max-w-7xl mx-auto px-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-            {/* Column 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-10">
+            {/* Column 1 - Brand & Social */}
             <div>
               <h3 className="text-xl font-bold mb-5">YT Africa</h3>
               <p className="text-gray-400 mb-5">
@@ -29,7 +31,7 @@ function Footer() {
               </div>
             </div>
 
-            {/* Column 2 */}
+            {/* Column 2 - Explore */}
             <div>
               <h3 className="text-xl font-bold mb-5">Explore</h3>
               <ul className="space-y-3">
@@ -41,19 +43,7 @@ function Footer() {
               </ul>
             </div>
 
-            {/* Column 3 */}
-            <div>
-              <h3 className="text-xl font-bold mb-5">Resources</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-[#FF4FA3] transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#FF4FA3] transition-colors">Case Studies</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#FF4FA3] transition-colors">Events</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#FF4FA3] transition-colors">Newsletter</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-[#FF4FA3] transition-colors">Community</a></li>
-              </ul>
-            </div>
-
-            {/* Column 4 */}
+            {/* Column 3 - Contact */}
             <div>
               <h3 className="text-xl font-bold mb-5">Contact</h3>
               <ul className="space-y-3">
@@ -66,11 +56,10 @@ function Footer() {
           </div>
 
           <div className="pt-8 border-t border-white/10 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 YT Africa. All rights reserved.</p>
+            <p>&copy; {currentYear} YT Africa. All rights reserved.</p>
           </div>
         </div>
       </footer>
-  
     </>
   )
 }
