@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          YT
+          YT Africa
         </Link>
         
         <div className="navbar-menu">
@@ -22,14 +22,20 @@ const Navbar = () => {
             to="/show" 
             className={`navbar-link ${location.pathname === '/show' ? 'active' : ''}`}
           >
-            Show
+            The Show
           </Link>
           <Link 
             to="/product-mastery" 
             className={`navbar-link ${location.pathname === '/product-mastery' ? 'active' : ''}`}
           >
-            Product Mastery
+            YT School
           </Link>
+          {/* <Link 
+            to="/show" 
+            className={`navbar-link ${location.pathname.startsWith('/show') ? 'active' : ''}`}
+          >
+            Experiments
+          </Link> */}
         </div>
       </div>
     </nav>
