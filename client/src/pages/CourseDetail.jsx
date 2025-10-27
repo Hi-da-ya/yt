@@ -116,7 +116,7 @@ const CourseDetail = () => {
             <p className="course-detail-subtitle">{course.subtitle}</p>
             <div className="course-meta">
               <span className="course-meta-badge">{course.duration}</span>
-              <span className="course-meta-students">500+ students</span>
+             
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ const CourseDetail = () => {
                 <div className="curriculum-number">Phase {module.Phase}</div>
                 <div className="curriculum-content">
                   <h3>{module.topic}</h3>
-                  <p>{module.lessons} lessons</p>
+                 
                 </div>
               </div>
             ))}
