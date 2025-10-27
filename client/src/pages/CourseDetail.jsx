@@ -5,7 +5,7 @@ const courseData = {
   'product-mastery': {
     title: 'Product Mastery',
     subtitle: 'Master the art of building products that users actually need',
-    duration: '6 weeks',
+    duration: '5 days',
     description: 'Learn product sense, user research, and how to validate ideas in African markets. This comprehensive course combines theory with real-world applications.',
     icon: (
       <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
@@ -21,18 +21,18 @@ const courseData = {
       'Community support'
     ],
     curriculum: [
-      { week: 1, topic: 'Introduction to Product Thinking', lessons: 4 },
-      { week: 2, topic: 'User Research Deep Dive', lessons: 5 },
-      { week: 3, topic: 'Validating Product Ideas', lessons: 4 },
-      { week: 4, topic: 'Product-Market Fit in Africa', lessons: 5 },
-      { week: 5, topic: 'Building Your First Product', lessons: 6 },
-      { week: 6, topic: 'Launch and Iteration', lessons: 4 }
+      { Phase: 1, topic: ' Learn the Fundamentals That Actually Matter'},
+      { Phase: 2, topic: 'Experience Real PM Life Through Immersive Simulations'},
+      { Phase: 3, topic: 'Build Practical Skills That Get You Hired', },
+      { Phase: 4, topic: 'Learn from PMs Who Are Winning in the Field' },
+      { Phase: 5, topic: 'Create Your Hiring Package' },
+      { Phase: 6, topic: 'Launch and Iteration'}
     ]
   },
   'no-code-automation': {
     title: 'No Code Automation',
     subtitle: 'Build powerful solutions without writing code',
-    duration: '4 weeks',
+    duration: '3 days',
     description: 'Master automation tools, workflows, and create business applications using no-code platforms. Perfect for non-technical founders and business owners.',
     icon: (
       <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
@@ -48,16 +48,16 @@ const courseData = {
       'Platform mastery (Zapier, Make, etc.)'
     ],
     curriculum: [
-      { week: 1, topic: 'Introduction to No-Code Automation', lessons: 4 },
-      { week: 2, topic: 'Workflow Design Fundamentals', lessons: 5 },
-      { week: 3, topic: 'Advanced Automation Techniques', lessons: 5 },
-      { week: 4, topic: 'Real-World Projects and Deployment', lessons: 6 }
+      { Phase: 1, topic: 'Introduction to No-Code Automation'},
+      { Phase: 2, topic: 'Department-Specific Solutions'},
+      { Phase: 3, topic: 'Scale & Governance'},
+
     ]
   },
   'art-of-pitching': {
     title: 'The Art of Pitching',
     subtitle: 'Perfect your pitch and win over investors, partners, and customers',
-    duration: '3 weeks',
+    duration: '3 days',
     description: 'Learn storytelling, persuasion techniques, and how to present your African tech venture. From investor pitches to customer presentations.',
     icon: (
       <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
@@ -73,9 +73,9 @@ const courseData = {
       'Templates and frameworks'
     ],
     curriculum: [
-      { week: 1, topic: 'The Art of Storytelling', lessons: 4 },
-      { week: 2, topic: 'Building Your Pitch Deck', lessons: 5 },
-      { week: 3, topic: 'Presentation Skills and Delivery', lessons: 4 }
+      { Phase: 1, topic: 'The Art of Storytelling' },
+      { Phase: 2, topic: 'Building Your Pitch Deck'},
+      { Phase: 3, topic: 'Presentation Skills and Delivery' }
     ]
   }
 }
@@ -143,7 +143,7 @@ const CourseDetail = () => {
           <div className="curriculum-list">
             {course.curriculum.map((module, index) => (
               <div key={index} className="curriculum-item">
-                <div className="curriculum-number">Week {module.week}</div>
+                <div className="curriculum-number">Phase {module.Phase}</div>
                 <div className="curriculum-content">
                   <h3>{module.topic}</h3>
                   <p>{module.lessons} lessons</p>
