@@ -37,27 +37,27 @@ export default function Show() {
   const episodes = [
     {
       id: "_MjFvnNF4Bc", // This one works because it's a clean ID
-      title: "Flutterwave's 3 Near-Death Experiences",
+      title: "Why Young Techiez?",
     },
     {
       id: "GwtWuyRF6pE", // Removed &t=111s
-      title: "Andela: The Truth Behind 400 Layoffs",
+      title: "From 5K Intern to 6-Figure Data scientist: Inside the Tech Grind",
     },
     {
       id: "CdOP-ysaVnE", // Removed &t=1505s
-      title: "Jumia's $1B Logistics Nightmare",
+      title: "From a bedsitter in Wendani to working for the biggest tech companies globally",
     },
     {
       id: "lIQNj-_dEfg", // Removed &t=8s
-      title: "Paystack: 47 Investor Rejections",
+      title: "Quitting School and finding success in tech; Juma Allan’s inspiring Tech journey.",
     },
     {
       id: "YlW_vlCS6Ow", // Removed "v="
-      title: "Interswitch's 2008 Collapse Story",
+      title: "Debugging Success: What They Don't tell you about a successful tech career"
     },
     {
       id: "eKM9MpDvUg4", // Removed &t=143s
-      title: "Farmcrowdy's Pivot or Die Moment",
+      title: "From Burnout to Breakthrough: The Journey to Becoming a Machine Learning Engineer",
     }
   ].map(episode => ({
     ...episode,
