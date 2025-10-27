@@ -1,0 +1,108 @@
+.show-page {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+.show-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.show-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.show-subtitle {
+  font-size: 1.5rem;
+  color: #ff69b4;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.show-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.show-hero {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  border-radius: 16px;
+}
+
+.show-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.show-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.show-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: #ff69b4;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.15);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .show-title {
+    font-size: 2.5rem;
+  }
+  
+  .show-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .show-hero {
+    padding: 2rem;
+  }
+  
+  .show-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .show-hero p {
+    font-size: 1.1rem;
+  }
+}
+
