@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
+import Logo from '../assets/Logo.png'
+
 
 const Navbar = () => {
   const location = useLocation()
@@ -8,8 +10,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          YT Africa
+          <img src={Logo} alt="Young Techiez" className="w-40 h-auto" />
         </Link>
+    
         
         <div className="navbar-menu">
           <Link 

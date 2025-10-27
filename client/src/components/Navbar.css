@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  height: 40px; /* Fixed height for consistent sizing */
 }
 
 .navbar-logo:hover {
@@ -34,10 +35,23 @@
   transform: scale(1.05);
 }
 
-.navbar-logo::before {
-  content: '▶';
-  font-size: 1.2rem;
+.logo-image {
+  height: 100%; /* Fill the container height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Zoom to fit while maintaining aspect ratio */
+  max-width: 200px; /* Prevent excessive widening */
+  transition: all 0.3s ease;
 }
+
+.navbar-logo:hover .logo-image {
+  transform: scale(1.05); /* Match the hover effect */
+}
+
+/* Hide text if using only logo image */
+.logo-text {
+  display: none; /* Hide text if you only want the logo */
+}
+
 
 .navbar-menu {
   display: flex;
@@ -95,6 +109,11 @@
   
   .navbar-logo {
     font-size: 1.5rem;
+    height: 35px; /* Slightly smaller on mobile */
+  }
+  
+  .logo-image {
+    max-width: 150px; /* Smaller max-width on mobile */
   }
 }
 
@@ -115,5 +134,12 @@
     font-size: 0.85rem;
     padding: 0.3rem 0.6rem;
   }
+  
+  .navbar-logo {
+    height: 30px; /* Even smaller on very small screens */
+  }
+  
+  .logo-image {
+    max-width: 120px;
+  }
 }
-
