@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import heropic from "../assets/heropic.jpeg"
 
 export default function Home() {
   const navigate = useNavigate();
@@ -7,73 +8,72 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-        {/* Top gradient border */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
+  {/* Top gradient border */}
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
 
-        <div className="max-w-7xl mx-auto px-5">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+  <div className="max-w-7xl mx-auto px-5">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-            {/* Left Column - Text Content */}
-            <div className="flex-1 text-left">
-              {/* Brand Heading */}
-              <div className="mb-6">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#212121] mb-3">
-                  Young Techiez
-                </h1>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
-              </div>
-
-              <h2 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
-                Where African Tech Gets Real
-              </h2>
-
-              <h3 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
-                The Future Isn’t Waiting, It’s Being Built.
-              </h3>
-
-              <h4 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
-                Real Stories. Real Skills. Real Impact.
-              </h4>
-
-              <p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
-                You’ve seen the hype. The buzzwords. The talk. But here, we go beyond it.  
-                At <strong>Young Techiez</strong>, we bring the truth of tech in Africa  the wins, the setbacks, and the courage it takes to build something real.  
-                In our school, you’ll learn by doing. In our lab, you’ll test what works.  
-                And through our show, you’ll see that your journey is part of something bigger.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-5 mt-8">
-                <button
-                  onClick={() => navigate('/show')}
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
-                >
-                  Watch The Show
-                </button>
-
-                <button
-                  onClick={() => navigate('/product-mastery')}
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
-                >
-                  Learn more about YT School
-                </button>
-              </div>
-            </div>
-
-            {/* Right Column - Image */}
-            <div className="flex-1">
-              <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80"
-                  alt="African Tech Team"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-
-          </div>
+      {/* Left Column - Text Content */}
+      <div className="flex-1 text-left">
+        {/* Brand Heading */}
+        <div className="mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#212121] mb-3">
+            Young Techiez
+          </h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
         </div>
-      </section>
 
+        <h2 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
+          Where African Tech Gets Real
+        </h2>
+
+        <h3 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
+          The Future Isn't Waiting, It's Being Built.
+        </h3>
+
+        <h4 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
+          Real Stories. Real Skills. Real Impact.
+        </h4>
+
+        <p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
+          You've seen the hype. The buzzwords. The talk. But here, we go beyond it.  
+          At <strong>Young Techiez</strong>, we bring the truth of tech in Africa the wins, the setbacks, and the courage it takes to build something real.  
+          In our school, you'll learn by doing. In our lab, you'll test what works.  
+          And through our show, you'll see that your journey is part of something bigger.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-5 mt-8">
+          <button
+            onClick={() => navigate('/show')}
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
+          >
+            Watch The Show
+          </button>
+
+          <button
+            onClick={() => navigate('/product-mastery')}
+            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
+          >
+            Learn more about YT School
+          </button>
+        </div>
+      </div>
+
+      {/* Right Column - Image (Hidden on mobile, visible on lg screens and above) */}
+      <div className="flex-1 hidden lg:block">
+        <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-gradient-to-br from-white to-gray-50 p-4">
+          <img 
+            src={heropic} 
+            alt="Young Techiez Team" 
+            className="w-full h-auto object-cover rounded-xl"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Pillars Section */}
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-5">
