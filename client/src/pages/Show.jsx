@@ -176,7 +176,7 @@ export default function Show() {
               </p>
               <button
                 onClick={() => handlePlayClick(episodes[0])}
-                className="bg-pink-500 text-white px-8 py-3.5 rounded-full font-semibold border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white px-8 py-3.5 rounded-full font-semibold border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 Watch Now
               </button>
@@ -226,6 +226,29 @@ export default function Show() {
           </div>
         </div>
       </section>
+
+      {/* Final CTA */}
+        <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-cente">
+          <div className="max-w-7xl mx-auto px-5">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Ready to see what building in Africa really looks like?
+            </h2>
+
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">
+              Tune in to <span className="font-semibold">Young Techiez: The Show</span> and experience the stories behind the code,  
+              the courage behind the startups, and the lessons that no one tells you in tutorials.  
+              These are the conversations that keep you going when the grind feels heavy.
+            </p>
+
+            <button
+              onClick={() => window.open('https://www.youtube.com/@Young_Techiez', '_blank')}
+              className="inline-block px-8 py-3.5 rounded-full font-semibold text-pink-500 bg-white border-2 border-white hover:bg-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            >
+              Watch The Show
+            </button>
+          </div>
+        </section>
+
     </div>
   );
 }
