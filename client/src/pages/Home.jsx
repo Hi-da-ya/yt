@@ -7,60 +7,72 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-      {/* Top gradient border */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
-      
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          {/* Left Column - Text Content */}
-          <div className="flex-1 text-left">
-            <h1 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
-              Where African Tech Gets Real
-            </h1>
-            
-            <h2 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
-              We Go Beyond The Hype
-            </h2>
-            
-            <h3 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
-              Real Stories. Real Skills. Real Impact.
-            </h3>
-<p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
-              We go beyond the hype. Through our show, we uncover the true stories of building in Africa. 
-              At YT School, we teach the skills that actually work on the ground. In our lab, we test what truly scales.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-5 mt-8">
-              <button
-                onClick={() => navigate('/show')}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
-              >
-                Watch The Show
-              </button>
-<button
-                onClick={() => navigate('/product-mastery')}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
-              >
-                Learn more about YT School
-              </button>
+        {/* Top gradient border */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
+
+        <div className="max-w-7xl mx-auto px-5">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+
+            {/* Left Column - Text Content */}
+            <div className="flex-1 text-left">
+              {/* Brand Heading */}
+              <div className="mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#212121] mb-3">
+                  Young Techiez
+                </h1>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
+              </div>
+
+              <h2 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
+                Where African Tech Gets Real
+              </h2>
+
+              <h3 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
+                The Future Isn’t Waiting, It’s Being Built.
+              </h3>
+
+              <h4 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
+                Real Stories. Real Skills. Real Impact.
+              </h4>
+
+              <p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
+                You’ve seen the hype. The buzzwords. The talk. But here, we go beyond it.  
+                At <strong>Young Techiez</strong>, we bring the truth of tech in Africa  the wins, the setbacks, and the courage it takes to build something real.  
+                In our school, you’ll learn by doing. In our lab, you’ll test what works.  
+                And through our show, you’ll see that your journey is part of something bigger.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5 mt-8">
+                <button
+                  onClick={() => navigate('/show')}
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
+                >
+                  Watch The Show
+                </button>
+
+                <button
+                  onClick={() => navigate('/product-mastery')}
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
+                >
+                  Learn more about YT School
+                </button>
+              </div>
             </div>
-          </div>
-          
-          {/* Right Column - Image */}
-          <div className="flex-1">
-            <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-<img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" 
-                alt="African Tech Team" 
-                className="w-full h-auto object-cover"
-              />
+
+            {/* Right Column - Image */}
+            <div className="flex-1">
+              <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80"
+                  alt="African Tech Team"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
+
           </div>
-          
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Pillars Section */}
       <section className="py-20 md:py-32 bg-white">
@@ -68,11 +80,12 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#212121] mb-4">Our Three Pillars</h2>
             <p className="text-[#757575] max-w-2xl mx-auto">
-              Three distinct approaches to understanding and advancing African tech
+              Three distinct ways we’re shaping the next generation of African builders.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {/* Pillar 1 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 hover:-translate-y-3 hover:shadow-xl transition-all duration-300 flex flex-col">
               <div className="h-32 bg-gradient-to-br from-[#FF4FA3] to-[#D42D7A] flex items-center justify-center text-white text-5xl">
@@ -85,9 +98,11 @@ export default function Home() {
                   Behind The Tech Success Curtains
                 </h3>
                 <p className="text-[#757575] mb-5 flex-grow">
-                  We showcase Africa's most inspiring Tech stories, while getting the raw view behind the curtains: the failures, the pivots, the hard-won lessons. This is the mentorship you wish you had. These are the people you can hang out with in your room, when it all feels a little much, knowing they too were exactly where you were.
+                  Forget the glossy highlight reels. We pull back the curtain on Africa’s most inspiring builders  the missteps, the pivots, the nights it almost didn’t work.  
+                  This is where honesty meets mentorship.  
+                  The stories here remind you: every great founder, creator, and PM started right where you are  unsure, but daring enough to start.
                 </p>
-                <button 
+                <button
                   onClick={() => navigate('/show')}
                   className="text-[#FF4FA3] font-semibold inline-flex items-center hover:text-[#E03D8F] transition-colors group"
                 >
@@ -111,9 +126,11 @@ export default function Home() {
                   Skills That Work 'Kwa Ground
                 </h3>
                 <p className="text-[#757575] mb-5 flex-grow">
-                  Tired of theory that fails in practice? We use performance art and real-world simulation to teach product sense, no-code automation, and essential tech skills. Learn by doing, in contexts that mirror Africa's unique challenges.
+                  No more learning that looks good on paper but breaks in reality.  
+                  We’ll train you through real-world simulations  how to solve problems, design solutions, and think like a product manager who ships.  
+                  You’ll practice in messy, authentic contexts  because that’s how Africa builds.
                 </p>
-                <button 
+                <button
                   onClick={() => navigate('/product-mastery')}
                   className="text-[#FF4FA3] font-semibold inline-flex items-center hover:text-[#E03D8F] transition-colors group"
                 >
@@ -137,7 +154,9 @@ export default function Home() {
                   The African Tech Thesis
                 </h3>
                 <p className="text-[#757575] mb-5 flex-grow">
-                  What business models actually work here? We're building, testing, and validating tech ventures in real-time to answer one critical question: What does it take to build a scalable tech business in Africa?
+                  What truly works here? What business models actually scale on African soil?  
+                  We’re experimenting, building, and learning out loud  turning every insight into something others can build upon.  
+                  This isn’t theory  it’s the living blueprint of Africa’s tech future.
                 </p>
                 <button
                   onClick={() => navigate('/show')}
@@ -150,6 +169,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -158,10 +178,12 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-center">
         <div className="max-w-7xl mx-auto px-5">
           <h2 className="text-3xl md:text-4xl font-bold mb-5">
-            Ready to move beyond theory and into practice?
+            Ready to take the leap from dreamer to doer?
           </h2>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">
-            Join thousands of African tech enthusiasts who are building the future with practical skills and real-world insights.
+            Join the movement of African builders rewriting what’s possible   
+            one story, one skill, one product at a time.  
+            This is your moment to step in. We’ll guide you the rest of the way.
           </p>
           <button
             onClick={() => navigate('/product-mastery')}
@@ -171,9 +193,6 @@ export default function Home() {
           </button>
         </div>
       </section>
-
-      {/* Footer */}
-     
     </div>
   );
 }
