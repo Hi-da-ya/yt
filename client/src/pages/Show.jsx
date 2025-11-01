@@ -228,8 +228,8 @@ export default function Show() {
       </section>
 
       {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-cente">
-          <div className="max-w-7xl mx-auto px-5">
+        <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-center">
+          <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
               Ready to see what building in Africa really looks like?
             </h2>
@@ -242,8 +242,8 @@ export default function Show() {
 
             <button
               onClick={() => window.open('https://www.youtube.com/@Young_Techiez', '_blank')}
-              className="inline-block px-8 py-3.5 rounded-full font-semibold text-pink-500 bg-white border-2 border-white hover:bg-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-            >
+              className="inline-block px-8 py-3.5 rounded-full font-semibold text-[#FF4FA3] bg-white border-2 border-white hover:bg-gray-50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
               Watch The Show
             </button>
           </div>
