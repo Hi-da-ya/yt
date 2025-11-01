@@ -116,25 +116,38 @@ export default function Show() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 leading-tight">
             The Stories You Never Hear.
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-            Raw conversations with African tech builders about their real struggles, failures, and comebacks.
+
+          <h2 className="text-2xl md:text-3xl font-semibold text-pink-500 mb-6">
+            Because behind every success tweet, there’s a story of grit.
+          </h2>
+
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Young Techiez: The Show pulls back the curtain on Africa’s tech builders, the dreamers, coders, founders, and believers.  
+            The ones who failed, started again, and built something real.  
+            <br className="hidden md:block" />
+            These are not filtered wins; they are raw, honest conversations about how ideas are born, broken, and rebuilt.  
+            If you have ever wondered, "Can I really make it in tech?" these stories are your answer.
           </p>
         </div>
       </section>
 
-      {/* Featured Episode */}
+
+      
+     {/* Featured Episode */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Story</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Story
+            </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div 
+            <div
               className="relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
               onClick={() => handlePlayClick(episodes[0])}
             >
-              <img 
+              <img
                 src={episodes[0].thumbnail}
                 alt={episodes[0].title}
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
@@ -148,15 +161,20 @@ export default function Show() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <span className="inline-block bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-5">
                 Featured
               </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 {episodes[0].title}
               </h3>
-              <button 
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Behind every viral success lies a story you were never told — the confusion, the courage, the countless restarts.  
+                This is one of those stories.  
+                Watch how an idea became a journey, and how that journey continues to inspire the next wave of tech dreamers.
+              </p>
+              <button
                 onClick={() => handlePlayClick(episodes[0])}
                 className="bg-pink-500 text-white px-8 py-3.5 rounded-full font-semibold border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
@@ -166,6 +184,7 @@ export default function Show() {
           </div>
         </div>
       </section>
+
 
       {/* Episode Archive */}
       <section className="py-16 md:py-20 bg-gray-100">
