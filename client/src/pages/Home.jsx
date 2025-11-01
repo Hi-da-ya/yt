@@ -6,31 +6,61 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 text-center overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
-        <div className="max-w-7xl mx-auto px-5">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
-            Where African Tech Gets Real
-          </h1>
-          <p className="text-lg md:text-xl text-[#757575] max-w-3xl mx-auto mb-10">
-            We go beyond the hype. Through our show, we uncover the true stories of building in Africa. At YT School, we teach the skills that actually work on the ground. In our lab, we test what truly scales.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-5 mt-8">
-            <button
-              onClick={() => navigate('/show')}
-              className="inline-block px-8 py-3.5 rounded-full font-semibold text-white bg-[#FF4FA3] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
-            >
-              Watch The Show
-            </button>
-            <button
-              onClick={() => navigate('/product-mastery')}
-              className="inline-block px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
-            >
-              Learn more about YT School
-            </button>
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
+      {/* Top gradient border */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
+      
+      <div className="max-w-7xl mx-auto px-5">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          
+          {/* Left Column - Text Content */}
+          <div className="flex-1 text-left">
+            <h1 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
+              Where African Tech Gets Real
+            </h1>
+            
+            <h2 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
+              We Go Beyond The Hype
+            </h2>
+            
+            <h3 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
+              Real Stories. Real Skills. Real Impact.
+            </h3>
+<p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
+              We go beyond the hype. Through our show, we uncover the true stories of building in Africa. 
+              At YT School, we teach the skills that actually work on the ground. In our lab, we test what truly scales.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-5 mt-8">
+              <button
+                onClick={() => navigate('/show')}
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
+              >
+                Watch The Show
+              </button>
+<button
+                onClick={() => navigate('/product-mastery')}
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
+              >
+                Learn more about YT School
+              </button>
+            </div>
           </div>
+          
+          {/* Right Column - Image */}
+          <div className="flex-1">
+            <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+<img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" 
+                alt="African Tech Team" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Pillars Section */}
       <section className="py-20 md:py-32 bg-white">
@@ -125,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#E03D8F] text-white text-center">
+      <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-center">
         <div className="max-w-7xl mx-auto px-5">
           <h2 className="text-3xl md:text-4xl font-bold mb-5">
             Ready to move beyond theory and into practice?
