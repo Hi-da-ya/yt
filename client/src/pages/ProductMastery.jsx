@@ -7,20 +7,22 @@ const ProductMastery = () => {
   return (
     <div className="product-mastery-page">
       <div className="product-mastery-container">
+        {/* Header Section */}
         <div className="product-mastery-header">
-          <h1 className="product-mastery-title">YT School</h1>
-          <p className="product-mastery-subtitle">Skills That Work 'Kwa Ground'</p>
+          <h1 className="product-mastery-title">Young Techiez School</h1>
+          <p className="product-mastery-subtitle">Skills That Actually Work ‘Kwa Ground’</p>
           <p className="product-mastery-description">
-            Tired of theory that fails in practice? We use performance art and 
-            real-world simulation to teach product sense, no-code automation, and 
-            essential tech skills. Learn by doing, in contexts that mirror Africa's 
-            unique challenges.
+            We’re done with empty theory.  
+            Here, we learn by doing. We role-play real product chaos, automate like pros,  
+            and tell stories that sell ideas.  
           </p>
         </div>
-        
+
+        {/* Courses Grid */}
         <div className="courses-grid">
+
           {/* Product Mastery Course */}
-          <div className="course-card">
+          <div className="course-card course-card--featured">
             <div className="course-header">
               <div className="course-icon">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
@@ -29,23 +31,31 @@ const ProductMastery = () => {
               </div>
               <div className="course-badge">Featured</div>
             </div>
+
             <h3 className="course-title">Product Mastery</h3>
             <p className="course-description">
-            You've done your research. You know Product Management is the right 
-            next step for your career. But now you're stuck wondering: "What's the 
-            surest path from where I am to where I want to be?"
+              You’ve whispered it for months: “I know Product might be for me.”  
+              This is your sign to stop saying ‘soon’ — and start.  
+              We’ll train you, coach you, and push you to think, talk, and act like a Product Manager.
             </p>
+
             <ul className="course-features">
-              <li>✓ Fundamentals of Product Management</li>
-              <li>✓ Product-market fit strategies</li>
-              <li>✓ African market insights</li>
-              <li>✓ Hands-on projects</li>
+              <li>✓ Product sense & fundamentals</li>
+              <li>✓ Real African market case studies</li>
+              <li>✓ Discovery, MVPs & stakeholder alignment</li>
+              <li>✓ Role-play simulations + portfolio case study</li>
             </ul>
+
             <div className="course-footer">
               <span className="course-duration">5 days</span>
               <div className="course-actions">
-                <button className="course-btn-learn" onClick={() => navigate('/course/product-mastery')}>Learn More</button>
-                <button className="course-btn">Enroll Now</button>
+                <button
+                  className="course-btn-learn"
+                  onClick={() => navigate('/course/product-mastery')}
+                >
+                  Learn More
+                </button>
+                <button className="course-btn bg-gradient-to-br from-[#FF4FA3] to-[#212121]">Enroll Now</button>
               </div>
             </div>
           </div>
@@ -61,20 +71,26 @@ const ProductMastery = () => {
             </div>
             <h3 className="course-title">No Code Automation</h3>
             <p className="course-description">
-              Build powerful solutions without writing code. Master automation tools, 
-              workflows, and create business applications using no-code platforms.
+              You don’t need to code to build.  
+              Learn to automate workflows, optimize processes, and launch MVPs faster than ever —  
+              all without writing a single line of code.
             </p>
             <ul className="course-features">
-              <li>✓ Automation fundamentals</li>
-              <li>✓ Workflow design</li>
+              <li>✓ Automation & workflow design</li>
               <li>✓ Business process optimization</li>
-              <li>✓ Real-world case studies</li>
+              <li>✓ Hands-on projects with real tools</li>
+              <li>✓ Build working prototypes in class</li>
             </ul>
             <div className="course-footer">
               <span className="course-duration">3 days</span>
               <div className="course-actions">
-                <button className="course-btn-learn" onClick={() => navigate('/course/no-code-automation')}>Learn More</button>
-                <button className="course-btn">Enroll Now</button>
+                <button
+                  className="course-btn-learn"
+                  onClick={() => navigate('/course/no-code-automation')}
+                >
+                  Learn More
+                </button>
+                <button className="course-btn bg-gradient-to-br from-[#FF4FA3] to-[#212121]">Enroll Now</button>
               </div>
             </div>
           </div>
@@ -90,28 +106,44 @@ const ProductMastery = () => {
             </div>
             <h3 className="course-title">The Art of Pitching</h3>
             <p className="course-description">
-              Perfect your pitch and win over investors, partners, and customers. Learn storytelling, 
-              persuasion techniques, and how to present your African tech venture.
+              Great ideas don’t sell themselves — storytellers do.  
+              Learn to communicate like a founder, persuade like a marketer, and  
+              pitch like your dream depends on it (because it just might).
             </p>
             <ul className="course-features">
-              <li>✓ Storytelling fundamentals</li>
-              <li>✓ Investor pitch decks</li>
-              <li>✓ Persuasion techniques</li>
-              <li>✓ African market context</li>
+              <li>✓ Storytelling & persuasion</li>
+              <li>✓ Investor-ready pitch decks</li>
+              <li>✓ African venture insights</li>
+              <li>✓ Real pitch simulations</li>
             </ul>
             <div className="course-footer">
               <span className="course-duration">3 days</span>
               <div className="course-actions">
-                <button className="course-btn-learn" onClick={() => navigate('/course/art-of-pitching')}>Learn More</button>
-                <button className="course-btn">Enroll Now</button>
+                <button
+                  className="course-btn-learn"
+                  onClick={() => navigate('/course/art-of-pitching')}
+                >
+                  Learn More
+                </button>
+                <button className="course-btn bg-gradient-to-br from-[#FF4FA3] to-[#212121]">Enroll Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="cta-section">
+        {/* Final CTA */}
+        <div className="cta-section bg-gradient-to-br from-[#FF4FA3] to-[#212121]">
           <h3>Ready to Make the Jump?</h3>
-          <p>Join our community of builders who are creating real impact</p>
+          <p>
+            You don’t have to do it alone — join our tribe of makers, dreamers, and doers  
+            shaping Africa’s digital future, one product at a time.
+          </p>
+          <button
+            className="cta-btn"
+            onClick={() => window.open('https://www.youtube.com/@Young_Techiez', '_blank')}
+          >
+            Watch the Show
+          </button>
         </div>
       </div>
     </div>
@@ -119,4 +151,3 @@ const ProductMastery = () => {
 }
 
 export default ProductMastery
-

@@ -61,6 +61,12 @@
   box-shadow: 0 12px 40px rgba(255, 79, 163, 0.15);
 }
 
+.course-card--featured {
+  border-color: #FF4FA3;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 79, 163, 0.15);
+}
+
 .course-header {
   display: flex;
   justify-content: space-between;
