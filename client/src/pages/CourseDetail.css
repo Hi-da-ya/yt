@@ -129,19 +129,36 @@
 }
 
 .curriculum-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
   background-color: #f9f9f9;
   border-radius: 12px;
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .curriculum-item:hover {
   border-color: #FF4FA3;
-  transform: translateX(5px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 79, 163, 0.1);
+}
+
+.curriculum-item.open {
+  border-color: #FF4FA3;
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(255, 79, 163, 0.15);
+}
+
+.curriculum-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.curriculum-item:hover .curriculum-header {
+  padding-left: 1.75rem;
 }
 
 .curriculum-number {
@@ -156,18 +173,46 @@
   font-size: 0.9rem;
   font-weight: 700;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.curriculum-content h3 {
+.curriculum-item:hover .curriculum-number {
+  transform: scale(1.05);
+}
+
+.curriculum-header h3 {
   font-size: 1.2rem;
   font-weight: 600;
   color: #212121;
-  margin-bottom: 0.25rem;
+  margin: 0;
+  flex: 1;
+  transition: all 0.3s ease;
 }
 
-.curriculum-content p {
-  font-size: 0.9rem;
+.curriculum-item.open .curriculum-header h3 {
+  color: #FF4FA3;
+}
+
+.curriculum-details {
+  padding: 0 1.5rem 1.5rem 5.5rem;
+  margin: 0;
+  font-size: 1rem;
   color: #757575;
+  line-height: 1.6;
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .course-cta {
@@ -250,9 +295,14 @@
     font-size: 1.5rem;
   }
 
-  .curriculum-item {
+  .curriculum-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .curriculum-details {
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
   .course-cta {
