@@ -1,9 +1,10 @@
-/* Blogs Page Styles */
+/* Blogs Page Styles - Matching app constants */
+
 .blogs-page {
   min-height: 100vh;
 }
 
-/* Prose styles for blog content */
+/* Prose styles for blog content in modal */
 .prose {
   line-height: 1.75;
 }
@@ -17,7 +18,12 @@
   color: inherit;
 }
 
-/* Responsive adjustments */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure consistent spacing */
 @media (max-width: 768px) {
   .blogs-hero h1 {
     font-size: 2.5rem;
@@ -26,25 +32,4 @@
   .blogs-hero h2 {
     font-size: 1.75rem;
   }
-  
-  .blog-card {
-    margin-bottom: 2rem;
-  }
-}
-
-/* Animation for blog cards */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
