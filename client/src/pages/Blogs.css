@@ -1,0 +1,50 @@
+/* Blogs Page Styles */
+.blogs-page {
+  min-height: 100vh;
+}
+
+/* Prose styles for blog content */
+.prose {
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blogs-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .blogs-hero h2 {
+    font-size: 1.75rem;
+  }
+  
+  .blog-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Animation for blog cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

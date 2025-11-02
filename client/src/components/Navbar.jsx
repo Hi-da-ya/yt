@@ -56,6 +56,13 @@ const Navbar = () => {
           >
             YT School
           </Link>
+          <Link 
+            to="/blogs" 
+            className={`navbar-link ${location.pathname === '/blogs' ? 'active' : ''}`}
+            onClick={closeMenu}
+          >
+            Blogs
+          </Link>
         </div>
 
         {/* Overlay for mobile when menu is open */}
