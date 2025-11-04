@@ -172,6 +172,11 @@ const CourseDetail = () => {
     )
   }
 
+   // Determine CTA text and button style based on course
+   const isProductManagement = courseId === 'product-mastery'
+   const ctaButtonText = isProductManagement ? 'Enroll Now' : 'Coming Soon'
+   const ctaButtonClass = isProductManagement ? 'btn-enroll' : 'btn-coming-soon'
+
   return (
     <div className="course-detail-page">
       <div className="course-detail-container">
@@ -227,10 +232,9 @@ const CourseDetail = () => {
 
         <div className="course-cta">
           <h3>Ready to Make the Jump?</h3>
-          <p>Join the tribe of doers shaping Africa’s tech future — one skill at a time.</p>
+          <p>Join the tribe of doers shaping Africa's tech future — one skill at a time.</p>
           <div className="course-cta-actions">
-            <button className="btn-enroll">Enroll Now</button>
-            <button className="btn-wishlist">Add to Wishlist</button>
+            <button className={ctaButtonClass}>{ctaButtonText}</button>
           </div>
         </div>
       </div>
