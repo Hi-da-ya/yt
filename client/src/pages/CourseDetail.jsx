@@ -4,9 +4,9 @@ import './CourseDetail.css'
 
 const courseData = {
   'product-mastery': {
-    title: 'Product Mastery',
+    title: 'Product Management',
     subtitle: 'Learn to think, talk, and build like a Product Manager — for real.',
-    duration: '5 days',
+    duration: '4 days',
     description:
       "You’ve whispered it for months: “I want to work in tech, I know product might be for me.” Stop whispering. This is your NOW. Learn product sense, user research, and validation that works ‘kwa ground’. We train you to think like a PM — not just memorize frameworks.",
     icon: (
@@ -71,7 +71,16 @@ const courseData = {
     duration: '3 days',
     description:
       'Automation is the new superpower. Learn to build workflows, automate tasks, and create business systems using tools like Zapier and Make — no coding required.',
-    features: [
+    icon: (
+      <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fillRule="evenodd"
+          d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+      features: [
       'Automation fundamentals and best practices.',
       'Workflow design and optimization.',
       'African business use cases.',
@@ -105,7 +114,16 @@ const courseData = {
     duration: '3 days',
     description:
       'Learn how to pitch your startup or idea like a pro. Master storytelling, investor psychology, and presentation craft — made for African founders.',
-    features: [
+    icon: (
+      <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fillRule="evenodd"
+          d=" M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+      features: [
       'Learn to tell your story with confidence.',
       'Build investor-ready pitch decks.',
       'Understand persuasion and audience framing.',
@@ -161,7 +179,7 @@ const CourseDetail = () => {
           ← Back to Courses
         </button>
 
-        <div className="course-detail-header">
+        <div className="course-detail-header bg-gradient-to-br from-[#FF4FA3] to-[#212121]">
           <div className="course-detail-icon">{course.icon}</div>
           <div className="course-detail-info">
             <h1 className="course-detail-title">{course.title}</h1>
