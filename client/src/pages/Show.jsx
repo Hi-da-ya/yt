@@ -236,9 +236,9 @@ export default function Show() {
             </h2>
 
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 opacity-90 leading-relaxed">
-              Tune in to <span className="font-semibold">Young Techiez: The Show</span> and experience the stories behind the code,  
-              the courage behind the startups, and the lessons that no one tells you in tutorials.  
-              These are the conversations that keep you going when the grind feels heavy.
+            Behind the beautiful houses, flexible jobs, luxury cars, lies the stories of 3,000+ applications, endless learning nights, and a fight to stay in the game.
+            Young Techiez uncovers the real grind behind Africa’s biggest tech stories:the fear, failure, and fire that fuel every breakthrough.<br></br>
+            <strong>Watch it. Feel it. Then write your own story.</strong>
             </p>
 
             <button
