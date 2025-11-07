@@ -10,11 +10,10 @@ const ProductMastery = () => {
         {/* Header Section */}
         <div className="product-mastery-header">
           <h1 className="product-mastery-title">Young Techiez School</h1>
-          <p className="product-mastery-subtitle">Skills That Actually Work ‘Kwa Ground’</p>
+          <p className="product-mastery-subtitle">You do not need to code or a CS degree to be a techie</p>
           <p className="product-mastery-description">
-            We’re done with empty theory.  
-            Here, we learn by doing. We role-play real product chaos, automate like pros,  
-            and tell stories that sell ideas.  
+          We help non-technical professionals transition, reskill, and stay relevant in the digital age
+          through practical learning in Product Management, No-Code Automation, and Tech Career Navigation. 
           </p>
         </div>
 
