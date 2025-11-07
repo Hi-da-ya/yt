@@ -36,23 +36,23 @@ export default function Show() {
 
   const episodes = [
     {
-      id: "_MjFvnNF4Bc", // This one works because it's a clean ID
+      id: "_MjFvnNF4Bc", 
       title: "Why Young Techiez?",
     },
     {
-      id: "GwtWuyRF6pE", // Removed &t=111s
+      id: "GwtWuyRF6pE", 
       title: "From 5K Intern to 6-Figure Data scientist: Inside the Tech Grind",
     },
     {
-      id: "CdOP-ysaVnE", // Removed &t=1505s
+      id: "CdOP-ysaVnE", 
       title: "From a bedsitter in Wendani to working for the biggest tech companies globally",
     },
     {
-      id: "lIQNj-_dEfg", // Removed &t=8s
+      id: "lIQNj-_dEfg",
       title: "Quitting School and finding success in tech; Juma Allan’s inspiring Tech journey.",
     },
     {
-      id: "YlW_vlCS6Ow", // Removed "v="
+      id: "YlW_vlCS6Ow", 
       title: "Debugging Success: What They Don't tell you about a successful tech career"
     },
     {
@@ -114,19 +114,17 @@ export default function Show() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-gray-900"></div>
         <div className="max-w-7xl mx-auto px-5">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 leading-tight">
-            The Stories You Never Hear.
+          The Side of Tech No One Talks About
           </h1>
 
           <h2 className="text-2xl md:text-3xl font-semibold text-pink-500 mb-6">
-            Because behind every success tweet, there’s a story of grit.
+          Uncovering the fear, failure, and self-doubt behind shiny tech careers
           </h2>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Young Techiez: The Show pulls back the curtain on Africa’s tech builders, the dreamers, coders, founders, and believers.  
-            The ones who failed, started again, and built something real.  
-            <br className="hidden md:block" />
-            These are not filtered wins; they are raw, honest conversations about how ideas are born, broken, and rebuilt.  
-            If you have ever wondered, "Can I really make it in tech?" these stories are your answer.
+          We see the cars, the trips, the freedom,  but rarely the truth behind it all.
+          The <strong>YT Show</strong> peels back the curtain on what it really takes to “make it” in tech: thousands of job applications, 10-hour coding days, months of uncertainty, and seasons of brokenness.
+          Through honest conversations with Africa’s top tech voices, we uncover the darkness behind the glamour - we share the hard, human stories that are part of every success story.
           </p>
         </div>
       </section>
