@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import heropic from "../assets/heropic.jpeg"
+import hero from "../assets/hero.jpeg"
 
 export default function Home() {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ export default function Home() {
             <div className="flex-1 hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-gradient-to-br from-white to-gray-50 p-4">
                 <img 
-                  src={heropic} 
+                  src={hero} 
                   alt="Young Techiez Team" 
                   className="w-full h-auto object-cover rounded-xl"
                 />
