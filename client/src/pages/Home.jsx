@@ -25,7 +25,7 @@ export default function Home() {
                 <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
               </div>
 
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#212121] mb-5 leading-tight">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#212121] mb-5 leading-tight">
                 Tech Is for Everyone. We Make Sure of It.
               </h2>
 
