@@ -14,7 +14,7 @@ function Footer() {
               Young Techiez
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Where African Tech Gets Real. We go beyond the hype to uncover the true stories of building in Africa.
+            Tech Is for Everyone. We Make Sure of It.
             </p>
             <div className="flex gap-3 pt-2">
               <a 
@@ -99,10 +99,10 @@ function Footer() {
                 </li>
                 <li>
                   <a 
-                    href="#" 
+                    href="tel:+254790311102" 
                     className="text-gray-300 hover:text-[#FF4FA3] transition-colors duration-200 focus:outline-none focus:text-[#FF4FA3]"
                   >
-                    Partnerships
+                    +254790311102
                   </a>
                 </li>
               </ul>
