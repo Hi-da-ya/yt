@@ -140,25 +140,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-center">
-        <div className="max-w-7xl mx-auto px-5">
-          <h2 className="text-3xl md:text-4xl font-bold mb-5">
-            Ready to take the leap from dreamer to doer?
-          </h2>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">
-            Join the movement of African builders rewriting what's possible   
-            one story, one skill, one product at a time.  
-            This is your moment to step in. We'll guide you the rest of the way.
-          </p>
-          <button
-            onClick={() => navigate('/product-mastery')}
-            className="inline-block px-8 py-3.5 rounded-full font-semibold text-[#FF4FA3] bg-white border-2 border-white hover:bg-gray-50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-          >
-            Explore YT School
-          </button>
-        </div>
-      </section>
+     {/* Final CTA */}
+<section className="py-20 bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white text-center">
+  <div className="max-w-7xl mx-auto px-5">
+    <h2 className="text-3xl md:text-4xl font-bold mb-5">
+      Ready to take the leap from dreamer to doer?
+    </h2>
+    <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-90">
+      The YT Show celebrates Africa's dreamers.
+      The YT School equips them to build.
+      One story and one skill at a time.
+    </p>
+    
+    {/* Enhanced Button Container */}
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6">
+      <button
+        onClick={() => navigate('/show')}
+        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-4 rounded-full font-semibold text-[#212121] bg-white border-2 border-white hover:bg-gray-50 hover:border-gray-50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-white/30"
+      >
+        Explore YT Show
+      </button>
+      
+     
+      
+      <button
+        onClick={() => navigate('/product-mastery')}
+        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-4 rounded-full font-semibold text-white bg-transparent border-2 border-white hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-white/30"
+      >
+        Explore YT School
+      </button>
+    </div>
+  </div>
+</section>
     </div>
   );
 }
