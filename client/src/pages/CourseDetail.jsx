@@ -271,7 +271,7 @@ const CourseDetail = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-br from-[#FF4FA3] to-[#212121] rounded-2xl p-6 sm:p-8 text-white text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to take the leap??</h3>
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to take the leap?</h3>
           <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
           We will hold your hand as you grow and as we build our tribe of dreamers and doers helping shape Africa’s digital future
           </p>
