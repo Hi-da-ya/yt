@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import heropic from "../assets/heropic.jpeg"
 import hero from "../assets/hero.jpeg"
 
 export default function Home() {
@@ -8,73 +7,68 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
+      
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-        {/* Top gradient border */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
+  {/* Top gradient border */}
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121]"></div>
 
-        <div className="max-w-7xl mx-auto px-5">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+  <div className="max-w-7xl mx-auto px-5">
+    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-16">
+      
+      {/* Left Column - Text Content */}
+      <div className="flex-1 text-left md:self-center">
+        {/* Brand Heading */}
+        <div className="mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#212121] mb-3">
+            Young Techiez
+          </h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
+        </div>
 
-            {/* Left Column - Text Content */}
-            <div className="flex-1 text-left">
-              {/* Brand Heading */}
-              <div className="mb-6">
-                <h1 className="text-3xl md:text-4xl font-bold text-[#212121] mb-3">
-                  Young Techiez
-                </h1>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#FF4FA3] to-[#212121] rounded-full"></div>
-              </div>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#212121] mb-5 leading-tight">
+          Tech Is for Everyone. We Make Sure of It.
+        </h2>
 
-              <h2 className="text-4xl md:text-6xl font-bold text-[#212121] mb-5 leading-tight">
-                Where African Tech Gets Real
-              </h2>
+        <p className="text-lg md:text-xl text-[#757575] mb-8 md:mb-10 leading-relaxed max-w-2xl">
+          <strong>YoungTechiez</strong> tells Africa's most inspiring tech stories and trains the next generation of tech leaders through real-world product management simulations you won't find anywhere else.
+          For non-techies and career switchers who want to break into tech — we teach skills that will position you in tech without requiring you to code.
+        </p>
 
-              <h3 className="text-2xl md:text-4xl font-semibold text-[#FF4FA3] mb-4 leading-tight">
-                The Future Isn't Waiting, It's Being Built.
-              </h3>
+        {/* Enhanced Responsive Button Layout */}
+        <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 sm:gap-5 mt-6 md:mt-8">
+          <button
+            onClick={() => navigate('/show')}
+            className="flex-1 xs:flex-none inline-flex items-center justify-center px-4 xs:px-6 sm:px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300 text-sm xs:text-base sm:text-lg min-w-[140px]"
+          >
+            Watch The Show
+          </button>
 
-              <h4 className="text-xl md:text-2xl text-[#757575] mb-6 font-medium">
-                Real Stories. Real Skills. Real Impact.
-              </h4>
+          <button
+            onClick={() => navigate('/product-mastery')}
+            className="flex-1 xs:flex-none inline-flex items-center justify-center px-4 xs:px-6 sm:px-8 py-3 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300 text-sm xs:text-base sm:text-lg min-w-[140px] text-center"
+          >
+            Learn about YT School
+          </button>
+        </div>
+      </div>
 
-              <p className="text-lg md:text-xl text-[#757575] mb-10 leading-relaxed">
-                You've seen the hype. The buzzwords. The talk. But here, we go beyond it.  
-                At <strong>Young Techiez</strong>, we bring the truth of tech in Africa the wins, the setbacks, and the courage it takes to build something real.  
-                In our school, you'll learn by doing. In our lab, you'll test what works.  
-                And through our show, you'll see that your journey is part of something bigger.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-5 mt-8">
-                <button
-                  onClick={() => navigate('/show')}
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-gradient-to-br from-[#FF4FA3] to-[#212121] border-2 border-[#FF4FA3] hover:bg-[#E03D8F] hover:border-[#E03D8F] hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-300/30 transition-all duration-300"
-                >
-                  Watch The Show
-                </button>
-
-                <button
-                  onClick={() => navigate('/product-mastery')}
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-[#212121] bg-transparent border-2 border-[#212121] hover:bg-[#212121] hover:text-white hover:-translate-y-1 transition-all duration-300"
-                >
-                  Learn more about YT School
-                </button>
-              </div>
-            </div>
-
-            {/* Right Column - Image (Hidden on mobile, visible on lg screens and above) */}
-            <div className="flex-1 hidden lg:block">
-              <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-gradient-to-br from-white to-gray-50 p-4">
-                <img 
-                  src={hero} 
-                  alt="Young Techiez Team" 
-                  className="w-full h-auto object-cover rounded-xl"
-                />
-              </div>
-            </div>
-
+      {/* Right Column - Image (Hidden on small mobile, visible on md screens and above) */}
+      <div className="flex-1 hidden md:block">
+        <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-gradient-to-br from-white to-gray-50 p-4 max-w-xs md:max-w-sm lg:max-w-md">
+          <div className="w-full aspect-[3/4] overflow-hidden rounded-xl">
+            <img 
+              src={hero} 
+              alt="Young Techiez Team" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
 
       {/* Pillars Section - Two Pillars */}
       <section className="py-20 md:py-32 bg-white">
@@ -96,12 +90,13 @@ export default function Home() {
               </div>
               <div className="p-6 md:p-8 flex-grow flex flex-col">
                 <h3 className="text-xl md:text-2xl font-bold text-[#212121] mb-4">
-                  Behind The Tech Success Curtains
+                Youngtechiez Show 
                 </h3>
                 <p className="text-[#757575] mb-5 flex-grow">
-                  Forget the glossy highlight reels. We pull back the curtain on Africa's most inspiring builders  the missteps, the pivots, the nights it almost didn't work.  
-                  This is where honesty meets mentorship.  
-                  The stories here remind you: every great founder, creator, and PM started right where you are  unsure, but daring enough to start.
+                Everyone talks about “making it” in tech, but the real story is rarely told.
+                On The YT Show, we sit down with Africans who started from scratch, failed, pivoted, and kept going until they made it.
+                These are the stories that show you it’s possible.
+                This is the mentorship you wish you had.
                 </p>
                 <button
                   onClick={() => navigate('/show')}
