@@ -270,20 +270,19 @@ const CourseDetail = () => {
         )}
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-br from-[#212121] to-[#000] rounded-2xl p-6 sm:p-8 text-white text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to Start Your Product Journey?</h3>
+        <div className="bg-gradient-to-br from-[#FF4FA3] to-[#212121] rounded-2xl p-6 sm:p-8 text-white text-center">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to take the leap??</h3>
           <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-            Choose the path that fits your goals and join Africa's next generation of product leaders.
+          We will hold your hand as you grow and as we build our tribe of dreamers and doers helping shape Africa’s digital future
           </p>
           <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:gap-4 justify-center">
             <button className="bg-white text-[#FF4FA3] px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg w-full sm:w-auto">
-              {program.cta}
+            Sign up for the 5 day masterclass
             </button>
             <button 
-              onClick={() => navigate('/product-mastery')}
               className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-[#212121] transition-colors w-full sm:w-auto"
             >
-              Compare Programs
+              Sign up for Full Program
             </button>
           </div>
         </div>
