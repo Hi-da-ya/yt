@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -60,21 +61,29 @@ function Footer() {
                 Explore
               </h3>
               <ul className="space-y-3">
+              <li>
+                  <Link 
+                    to="/" 
+                    className="text-gray-300 hover:text-[#FF4FA3] transition-colors duration-200 focus:outline-none focus:text-[#FF4FA3]"
+                  >
+                    Home
+                  </Link>
+                </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <Link
+                    to="/show" 
                     className="text-gray-300 hover:text-[#FF4FA3] transition-colors duration-200 focus:outline-none focus:text-[#FF4FA3]"
                   >
                     The Show
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
-                    href="#" 
+                  <Link
+                    to="/product-mastery" 
                     className="text-gray-300 hover:text-[#FF4FA3] transition-colors duration-200 focus:outline-none focus:text-[#FF4FA3]"
                   >
                     Young Techiez School
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
