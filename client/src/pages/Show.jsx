@@ -37,7 +37,7 @@ export default function Show() {
   const episodes = [
     {
       id: "_MjFvnNF4Bc", 
-      title: "Why Young Techiez?",
+      title: "Why We Started Young Techiez",
     },
     {
       id: "GwtWuyRF6pE", 
@@ -136,11 +136,12 @@ export default function Show() {
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Story
+              Our Why
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left grid - embeded video */}
             <div
               className="relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
               onClick={() => handlePlayClick(episodes[0])}
@@ -160,23 +161,25 @@ export default function Show() {
               </div>
             </div>
 
+             {/* Right grid */}
             <div>
               <span className="inline-block bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-5">
-                Featured
+                The Show
               </span>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 {episodes[0].title}
               </h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Behind every viral success lies a story you were never told — the confusion, the courage, the countless restarts.  
-                This is one of those stories.  
-                Watch how an idea became a journey, and how that journey continues to inspire the next wave of tech dreamers.
+              Tech has long been seen as stiff, complex, and reserved for the “smart few.”
+              Our founder, <strong>Phyian</strong>, set out to change that:  to bring the heart, soul, and art
+              back into tech. Because behind every highlight reel of cars, money, and freedom are the long nights, countless rejections, and quiet resilience that truly shape success.
+              At YT, we exist to tell those stories, and to make tech feel human again.
               </p>
               <button
-                onClick={() => handlePlayClick(episodes[0])}
+                onClick={() => window.open('https://www.youtube.com/@Young_Techiez', '_blank')}
                 className="bg-gradient-to-br from-[#FF4FA3] to-[#212121] text-white px-8 py-3.5 rounded-full font-semibold border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                Watch Now
+                Have a looksie
               </button>
             </div>
           </div>
