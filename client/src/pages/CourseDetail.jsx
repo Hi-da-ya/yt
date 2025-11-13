@@ -52,7 +52,9 @@ const courseData = {
           }
         ],
         outcome: "You'll leave with your first mini-portfolio and the confidence to start your PM journey.",
-        cta: 'Join the 5-Day Masterclass'
+        cta: 'Sign up for the 5 day masterclass',
+        status: 'active',
+        formPath: 'https://tally.so/r/wMkVQp'
       },
       fullProgram: {
         title: 'The Full Product Program',
@@ -60,35 +62,12 @@ const courseData = {
         description: 'Ready to go beyond the basics? In this immersive 6-week journey, you\'ll learn to lead products from idea to launch — mastering strategy, analysis, communication, and the tech confidence every great PM needs.',
         duration: '6 Weeks (1½ Months)',
         idealFor: 'Serious learners ready for career transition',
-        curriculum: [
-          {
-            module: 'Advanced Product Discovery & Strategy',
-            details: 'Go from user problems to scalable solutions'
-          },
-          {
-            module: 'Technology for PMs',
-            details: 'Understand how products are built: tech stacks, APIs, no-code tools, and system thinking (without needing to code)'
-          },
-          {
-            module: 'Data & Product Analytics',
-            details: 'Make confident, data-backed decisions'
-          },
-          {
-            module: 'Agile, Sprints & Collaboration',
-            details: 'Lead designers, devs, and business teams effectively'
-          },
-          {
-            module: 'Real African Market Projects',
-            details: 'Work on simulations and live briefs'
-          },
-          {
-            module: 'Career Prep',
-            details: 'Portfolio building, resume refinement, and interview coaching'
-          }
-        ],
+        curriculum: [], // Empty curriculum for coming soon
         outcome: "By the end, you'll not just 'get' Product — you'll own it. You'll be able to speak the language of engineers, translate business needs into tech outcomes, and lead with clarity.",
         certificate: 'Certificate, Portfolio, and Job-Ready Confidence',
-        cta: 'Apply for the Full Program'
+        cta: 'Join Waitlist',
+        status: 'coming-soon',
+        formPath: 'https://tally.so/r/2E80gM'
       }
     }
   }
@@ -97,7 +76,6 @@ const courseData = {
 const CourseDetail = () => {
   const { courseId } = useParams()
   const navigate = useNavigate()
-  const [openPhase, setOpenPhase] = useState(null)
   const [selectedProgram, setSelectedProgram] = useState('masterclass')
   const course = courseData[courseId]
 
@@ -119,6 +97,11 @@ const CourseDetail = () => {
 
   const program = course.programOptions[selectedProgram]
   const isMasterclass = selectedProgram === 'masterclass'
+  const isFullProgramComingSoon = program.status === 'coming-soon'
+
+  const handleCtaClick = () => {
+    window.open(program.formPath, '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -176,91 +159,103 @@ const CourseDetail = () => {
           </div>
         </div>
 
+        {/* Coming Soon Banner for Full Program */}
+        {isFullProgramComingSoon && (
+          <div className="mb-6 bg-gray-50 border border-gray-200 rounded-xl p-4">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-gray-800">
+                  Coming Soon
+                </h3>
+                <p className="text-sm text-gray-700 mt-1">
+                  The Full Program is currently in development. Join the waitlist to be the first to know when it launches!
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Program Details */}
         <div className="mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">{program.title}</h2>
           <p className="text-lg sm:text-xl text-[#FF4FA3] font-semibold italic mb-3 sm:mb-4 leading-relaxed">{program.subtitle}</p>
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">{program.description}</p>
           
-          {/* Program Meta */}
-          <div className="bg-gray-50 rounded-xl p-4 sm:p-6 border-l-4 border-[#FF4FA3] mb-4 sm:mb-6">
-            <div className="space-y-2 sm:space-y-3">
-              <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0">
-                <span className="font-semibold text-gray-900 text-sm sm:text-base sm:w-28 flex-shrink-0">🕒 Duration:</span>
-                <span className="text-gray-600 text-sm sm:text-base">{program.duration}</span>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0">
-                <span className="font-semibold text-gray-900 text-sm sm:text-base sm:w-28 flex-shrink-0">🎓 Ideal For:</span>
-                <span className="text-gray-600 text-sm sm:text-base">{program.idealFor}</span>
-              </div>
-              {program.certificate && (
+          {/* Only show program meta for Masterclass */}
+          {isMasterclass && (
+            <div className="bg-gray-50 rounded-xl p-4 sm:p-6 border-l-4 border-[#FF4FA3] mb-4 sm:mb-6">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0">
-                  <span className="font-semibold text-gray-900 text-sm sm:text-base sm:w-28 flex-shrink-0">📜 Outcome:</span>
-                  <span className="text-gray-600 text-sm sm:text-base">{program.certificate}</span>
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base sm:w-28 flex-shrink-0">🕒 Duration:</span>
+                  <span className="text-gray-600 text-sm sm:text-base">{program.duration}</span>
                 </div>
-              )}
+                <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0">
+                  <span className="font-semibold text-gray-900 text-sm sm:text-base sm:w-28 flex-shrink-0">🎓 Ideal For:</span>
+                  <span className="text-gray-600 text-sm sm:text-base">{program.idealFor}</span>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Curriculum */}
-        <div className="mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            What You'll {isMasterclass ? 'Learn' : 'Master'}
-          </h2>
-          <div className="space-y-3 sm:space-y-4">
-            {program.curriculum.map((item, index) => (
-              <div
-                key={index}
-                className={`bg-white border-2 border-gray-200 rounded-xl transition-all duration-300 ${
-                  isMasterclass 
-                    ? 'cursor-default hover:border-[#FF4FA3]'
-                    : 'cursor-pointer hover:border-[#FF4FA3]'
-                }`}
-                onClick={!isMasterclass ? () => setOpenPhase(openPhase === index ? null : index) : undefined}
-              >
-                <div className="p-4 sm:p-6">
-                  <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="bg-gradient-to-r from-[#FF4FA3] to-[#E03D8F] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold min-w-16 sm:min-w-20 text-center flex-shrink-0 mt-1">
-                      {isMasterclass ? `Day ${item.day}` : `Mod ${index + 1}`}
+        {/* Curriculum - Show only for Masterclass */}
+        {isMasterclass ? (
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+              What You'll Learn
+            </h2>
+            <div className="space-y-3 sm:space-y-4">
+              {program.curriculum.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white border-2 border-gray-200 rounded-xl transition-all duration-300 cursor-default hover:border-[#FF4FA3]"
+                >
+                  <div className="p-4 sm:p-6">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="bg-gradient-to-r from-[#FF4FA3] to-[#E03D8F] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold min-w-16 sm:min-w-20 text-center flex-shrink-0 mt-1">
+                        Day {item.day}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-tight">
+                          {item.topic}
+                        </h3>
+                        {item.details && (
+                          <p className="text-gray-600 text-sm sm:text-base mt-2 sm:mt-3 leading-relaxed">
+                            {item.details}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-tight">
-                        {item.topic || item.module}
-                      </h3>
-                      {/* Show details for masterclass if they exist, otherwise only show for full program when expanded */}
-                      {isMasterclass && item.details ? (
-                        <p className="text-gray-600 text-sm sm:text-base mt-2 sm:mt-3 leading-relaxed">
-                          {item.details}
-                        </p>
-                      ) : !isMasterclass && openPhase === index && item.details && (
-                        <p className="text-gray-600 text-sm sm:text-base mt-2 sm:mt-3 leading-relaxed">
-                          {item.details}
-                        </p>
-                      )}
-                    </div>
-                    {/* Only show dropdown arrow for full program */}
-                    {!isMasterclass && (
-                      <svg 
-                        className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1 ${
-                          openPhase === index ? 'rotate-180' : ''
-                        }`}
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    )}
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          // Hourglass Placeholder for Full Program
+          <div className="mb-6 sm:mb-8">
+            <div className="bg-gray-50 rounded-2xl p-8 sm:p-12 text-center border-2 border-dashed border-gray-300">
+              <div className="max-w-md mx-auto">
+                <div className="text-4xl sm:text-5xl mb-4 text-gray-400">⏳</div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-600 mb-3">
+                  Program Details Coming Soon
+                </h3>
+                <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                  We're putting the finishing touches on our comprehensive 6-week program. 
+                  Join the waitlist to be the first to see the complete curriculum when it's ready!
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
-        {/* Outcome */}
-        {program.outcome && (
+        {/* Outcome - Show only for Masterclass */}
+        {isMasterclass && program.outcome && (
           <div className="mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">What You'll Achieve</h2>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed bg-blue-50 rounded-xl p-4 sm:p-6 border-l-4 border-blue-500">
@@ -271,19 +266,29 @@ const CourseDetail = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-br from-[#FF4FA3] to-[#212121] rounded-2xl p-6 sm:p-8 text-white text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to take the leap?</h3>
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">
+            {isFullProgramComingSoon ? 'Be the First to Know' : 'Ready to take the leap?'}
+          </h3>
           <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-          We will hold your hand as you grow and as we build our tribe of dreamers and doers helping shape Africa’s digital future
+            {isFullProgramComingSoon 
+              ? 'Join the waitlist and be notified when the Full Program launches with exclusive early-bird opportunities.'
+              : 'We will hold your hand as you grow and as we build our tribe of dreamers and doers helping shape Africa\'s digital future'
+            }
           </p>
           <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:gap-4 justify-center">
-            <button className="bg-white text-[#FF4FA3] px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg w-full sm:w-auto">
-            Sign up for the 5 day masterclass
-            </button>
             <button 
-              className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-[#212121] transition-colors w-full sm:w-auto"
+              onClick={handleCtaClick}
+              className="bg-white text-[#FF4FA3] px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg w-full sm:w-auto"
             >
-              Sign up for Full Program
+              {program.cta}
             </button>
+            {!isFullProgramComingSoon && (
+              <button 
+                className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-[#212121] transition-colors w-full sm:w-auto"
+              >
+                Learn More
+              </button>
+            )}
           </div>
         </div>
       </div>
