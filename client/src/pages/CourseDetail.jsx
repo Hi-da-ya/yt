@@ -282,13 +282,13 @@ const CourseDetail = () => {
             >
               {program.cta}
             </button>
-            {!isFullProgramComingSoon && (
+            {/* {!isFullProgramComingSoon && (
               <button 
                 className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-[#212121] transition-colors w-full sm:w-auto"
               >
                 Learn More
               </button>
-            )}
+            )} */}
           </div>
         </div>
       </div>
